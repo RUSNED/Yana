@@ -139,4 +139,45 @@
     if (docs) initCarousel(docs, 'docs');
   })();
 
+  // Lightbox for docs images
+  (function initDocsLightbox(){
+    const imgs = document.querySelectorAll('.docs .docs__slide img');
+    if (!imgs.length) return;
+
+    // Create overlay once
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox';
+    overlay.setAttribute('role','dialog');
+    overlay.setAttribute('aria-modal','true');
+    overlay.setAttribute('aria-label','Просмотр документа');
+    overlay.innerHTML = '<button class="lightbox__close" aria-label="Закрыть">×</button><img class="lightbox__img" alt="Документ" />';
+    const overlayImg = overlay.querySelector('.lightbox__img');
+    const closeBtn = overlay.querySelector('.lightbox__close');
+    document.body.appendChild(overlay);
+
+    const open = (src, alt) => {
+      overlayImg.src = src;
+      overlayImg.alt = alt || 'Документ';
+      overlay.classList.add('is-open');
+      document.body.classList.add('_lock');
+    };
+    const close = () => {
+      overlay.classList.remove('is-open');
+      document.body.classList.remove('_lock');
+      overlayImg.src = '';
+    };
+
+    imgs.forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => open(img.src, img.alt));
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay || e.target === closeBtn) close();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) close();
+    });
+  })();
+
   

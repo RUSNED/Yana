@@ -157,8 +157,9 @@
   margin-top: auto;          /* прижать кнопку к низу карточки */
 }
 
-@media (max-width: 1380px) {
-  .ab__title { font-size: 48px; }
+/* Match other section titles' responsive sizing */
+@media (max-width: 1174px) {
+  .ab__title { font-size: 35px; line-height: 80px; margin: 0; }
 }
 
 /* Smooth typography scaling for Services */

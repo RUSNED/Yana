@@ -72,6 +72,7 @@
     flex-direction: column;
     align-items: center;
     padding: 80px 50px 30px 50px;
+    gap: 10px;
   }
   /* Перемещаем блок с заголовком и текстом над изображением */
   .about__content { order: -1; margin-bottom: 16px; }
