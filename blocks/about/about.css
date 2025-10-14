@@ -73,6 +73,8 @@
     align-items: center;
     padding: 80px 50px 30px 50px;
   }
+  /* Перемещаем блок с заголовком и текстом над изображением */
+  .about__content { order: -1; margin-bottom: 16px; }
   .about__text {
     font-size: 24px;
     padding-top: 10px;

@@ -40,6 +40,11 @@
   justify-items: center; /* центрируем карточки в колонках */
 }
 
+/* 2 колонки на средних экранах */
+@media (max-width: 1200px) {
+  .ab__cards { grid-template-columns: repeat(2, minmax(280px, 1fr)); }
+}
+
 .ab__card {
   width: 100%;
   max-width: 420px;
@@ -59,7 +64,7 @@
   font-family: Cormorant;
   font-size: 40px;
   font-weight: 700;
-  line-height: 43.6px;
+  line-height: 1.2;
   letter-spacing: -0.005em;
   text-align: left;
   border-bottom: 1px solid rgba(143, 110, 81, 0.35);
@@ -83,7 +88,7 @@
   font-family: Cormorant;
   font-size: 24px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.35;
   letter-spacing: -0.005em;
   color: rgba(0, 0, 0, 0.75);
   margin: 0;
@@ -156,13 +161,34 @@
   .ab__title { font-size: 48px; }
 }
 
+/* Smooth typography scaling for Services */
+@media (max-width: 1200px) {
+  .ab__header { font-size: 38px; }
+  .ab__meta { font-size: 22px; }
+  .ab__price { font-size: 24px; }
+}
+
 @media (max-width: 950px) {
   .ab__cards { grid-template-columns: 1fr; padding: 0 24px; }
   .ab__card { max-width: 700px; }
   .ab__title { font-size: 35px; }
   .ab__padding { padding-bottom: 0; }
+  .ab__meta { font-size: 22px; }
+  .ab__price { font-size: 24px; }
 }
 
 @media (max-width: 750px) {
   .ab__header { font-size: 34px; }
+}
+
+@media (max-width: 600px) {
+  .ab__header { font-size: 30px; }
+  .ab__meta { font-size: 20px; }
+  .ab__price { font-size: 22px; }
+}
+
+@media (max-width: 400px) {
+  .ab__header { font-size: 28px; }
+  .ab__meta { font-size: 18px; }
+  .ab__price { font-size: 20px; }
 }
