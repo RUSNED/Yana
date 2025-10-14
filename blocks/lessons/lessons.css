@@ -1,0 +1,136 @@
+
+.lessons__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 120px;
+  padding: 70px 120px;
+  margin: 0;
+  list-style: none;
+  margin: auto;
+}
+
+.lessons__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.lessons__image {
+  display: flex;
+  justify-content: center;
+  padding-right: 20px;
+  max-width: 510px;
+  max-height: 510px;
+}
+
+.lessons__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.lessons__image_paddingleft {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 120px;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.lessons__header {
+  font-family: Cormorant;
+  font-size: 49.17px;
+  font-weight: 500;
+  line-height: 59.54px;
+  letter-spacing: -0.005em;
+  margin: 0;
+  color: rgba(143, 110, 81, 1);
+}
+
+.lessons__text {
+  font-family: Cormorant;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.06px;
+  letter-spacing: -0.005em;
+  color:rgba(0, 0, 0, 0.58);
+  margin: 0;
+  padding-top: 20px;
+  text-align: justify;
+}
+
+.lessons__title {
+  font-family: Cormorant;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 91.87px;
+  letter-spacing: -0.005em;
+  color: rgba(143, 110, 81, 1);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+
+.card3 {
+justify-content: center;
+}
+
+.card5 {
+justify-content: center;
+}
+
+@media (max-width: 1407px) {
+  .lessons__image_paddingleft {
+    padding-left: 100px;
+  }
+  .lessons__text {
+    font-size: 20px;
+    line-height: 25px;
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 1174px) {
+  .lessons__cards {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+    padding: 30px 50px;
+    max-width: 900px;
+  }
+  .lessons__image {
+    padding: 0px;
+    margin: auto;
+  }
+  .lessons__image_paddingleft {
+    padding: 0px;
+    margin: auto;
+  }
+  .lessons__title {
+    margin: 0;
+    padding-top: 10px;
+  }
+  .card3 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .card4 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .lessons__header {
+    font-size: 35px;
+  }
+
+  .lessons__text {
+    font-size: 20px;
+    line-height: 25px;
+    padding-top: 25px;
+  }
+
+  .lessons__title {
+    font-size: 25px;
+    line-height: 80px;
+  }
+}

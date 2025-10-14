@@ -1,0 +1,157 @@
+.lets__container {
+  width: 100%;
+  background-image: url(../../images/motivation.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.lets__content {
+  padding: 40px 250px 60px 250px;
+}
+
+.lets__header {
+  font-family: "Cormorant";
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 77.5px;
+  letter-spacing: -0.005em;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+.lets__text {
+  font-family: "Cormorant";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 32.68px;
+  letter-spacing: 0.11em;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 1174px) {
+  .lets__header {
+    font-size: 30px;
+  }
+
+  .lets__text {
+    font-size: 25px;
+    line-height: 32.68px;
+  }
+  .lets__container {
+    margin-top: 100px;
+  }
+  .lets__content {
+    padding: 40px 250px 20px 250px;
+  }
+}
+
+@media (max-width: 1064px) {
+  .lets__header {
+    font-size: 30px;
+  }
+
+  .lets__text {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .lets__container {
+    margin-top: 70px;
+  }
+  .lets__content {
+    padding: 30px 250px 20px 250px;
+  }
+}
+
+@media (max-width: 884px) {
+  .lets__header {
+    font-size: 25px;
+  }
+
+  .lets__text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .lets__container {
+    margin-top: 70px;
+  }
+  .lets__content {
+    padding: 10px 200px 20px 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .lets__header {
+    font-size: 25px;
+    margin-bottom: 0px;
+    line-height: 40px;
+  }
+
+  .lets__text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .lets__container {
+  }
+  .lets__content {
+    padding: 10px 150px 20px 150px;
+  }
+}
+@media (max-width: 625px) {
+  .lets__header {
+    font-size: 22px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    line-height: 30px;
+  }
+
+  .lets__text {
+    font-size: 17px;
+    line-height: 15px;
+  }
+  .lets__container {
+  }
+  .lets__content {
+    padding: 10px 100px 20px 100px;
+  }
+}
+
+@media (max-width: 580px) {
+  .lets__header {
+    font-size: 22px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    line-height: 20px;
+  }
+
+  .lets__text {
+    font-size: 17px;
+    line-height: 15px;
+  }
+  .lets__container {
+  }
+  .lets__content {
+    padding: 10px 100px 20px 100px;
+  }
+}
+@media (max-width: 450px) {
+  .lets__header {
+    font-size: 22px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    line-height: 20px;
+  }
+
+  .lets__text {
+    font-size: 17px;
+    line-height: 15px;
+  }
+  .lets__container {
+  }
+  .lets__content {
+    padding: 10px 50px 20px 50px;
+  }
+}

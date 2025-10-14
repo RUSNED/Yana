@@ -1,0 +1,220 @@
+
+@import url(../blocks/body/body.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/motivation/motivation.css);
+@import url(../blocks/about/about.css);
+@import url(../blocks/lessons/lessons.css);
+@import url(../blocks/ab/ab.css);
+@import url(../blocks/lets/lets.css);
+
+@import url(../blocks/footer/footer.css);
+
+
+
+
+
+/* Reviews carousel */
+.reviews {
+  padding: 40px 0;
+}
+
+
+
+.reviews__container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px; /* space for arrows */
+  box-sizing: border-box;
+}
+
+.reviews__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.reviews__track {
+  display: flex;
+  transition: transform 0.4s ease;
+  will-change: transform;
+  list-style: none; /* убрать маркеры у списка */
+  padding: 0;      /* убрать отступы UL */
+  margin: 0;
+  align-items: center;
+}
+
+.reviews__slide {
+  flex: 0 0 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+  display: flex;               /* центрирование содержимого */
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__slide img {
+  display: block;
+  width: 50%; /* в 2 раза меньше */
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  object-fit: cover;
+  max-height: 70vh;
+}
+
+.reviews__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.reviews__nav:hover { background: rgba(0,0,0,0.65); }
+.reviews__nav:active { background: rgba(0,0,0,0.8); }
+
+.reviews__nav_prev { left: 8px; }
+.reviews__nav_next { right: 8px; }
+
+@media (max-width: 768px) {
+  .reviews__container { padding: 0 40px; }
+  .reviews__nav { width: 36px; height: 36px; }
+}
+
+@media (max-width: 480px) {
+  .reviews__container { padding: 0 32px; }
+  .reviews__nav { width: 32px; height: 32px; }
+}
+
+/* Responsive image sizing */
+@media (max-width: 1024px) {
+  .reviews__slide img { width: 70%; }
+}
+
+@media (max-width: 600px) {
+  .reviews__slide img { width: 90%; }
+  .reviews__container { padding: 0 24px; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reviews__track { transition: none; }
+}
+
+/* Docs carousel */
+.docs {
+  padding: 40px 0;
+}
+
+.docs__title { margin: 0; }
+
+.docs__container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 48px; /* как в блоке Отзывы */
+  box-sizing: border-box;
+}
+
+.docs__viewport { overflow: hidden; width: 100%; }
+
+.docs__track {
+  display: flex;
+  transition: transform 0.4s ease;
+  will-change: transform;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.docs__slide {
+  flex: 0 0 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.docs__slide img {
+  display: block;
+  width: auto;            /* не жмем по ширине фиксировано */
+  max-width: 50%;         /* ещё меньше, близко к размеру в Отзывах */
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  object-fit: contain;    /* показываем диплом целиком */
+  max-height: 58vh;       /* ниже высота для визуального уменьшения */
+}
+
+.docs__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.docs__nav:hover { background: rgba(0,0,0,0.65); }
+.docs__nav:active { background: rgba(0,0,0,0.8); }
+.docs__nav_prev { left: 8px; }
+.docs__nav_next { right: 8px; }
+
+@media (max-width: 1024px) {
+  .docs__slide img { max-width: 70%; max-height: 62vh; }
+}
+
+@media (max-width: 768px) {
+  .docs__container { padding: 0 40px; }
+  .docs__nav { width: 36px; height: 36px; }
+}
+
+@media (max-width: 600px) {
+  .docs__slide img { max-width: 84%; max-height: 58vh; }
+  .docs__container { padding: 0 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .docs__track { transition: none; }
+}
+
+/* Docs extra small screens */
+@media (max-width: 480px) {
+  .docs__container { padding: 10px 20px; }
+  .docs__nav { width: 32px; height: 32px; }
+  .docs__slide img { max-width: 90%; max-height: 54vh; }
+  .docs__title.lessons__title { font-size: 28px; line-height: 1.2; }
+}
+
+@media (max-width: 360px) {
+  .docs__container { padding: 0 16px; }
+  .docs__nav { width: 28px; height: 28px; }
+  .docs__slide img { max-width: 90%; max-height: 50vh; }
+}
+
+@media (max-width: 320px) {
+  .docs__container { padding: 0 12px; }
+  .docs__nav_prev { left: 6px; }
+  .docs__nav_next { right: 6px; }
+}
