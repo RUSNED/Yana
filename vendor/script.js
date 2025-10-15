@@ -141,7 +141,7 @@
 
   // Lightbox for docs images
   (function initDocsLightbox(){
-    const imgs = document.querySelectorAll('.docs .docs__slide img');
+    const imgs = document.querySelectorAll('.docs .docs__img, .docs .docs__slide img');
     if (!imgs.length) return;
 
     // Create overlay once

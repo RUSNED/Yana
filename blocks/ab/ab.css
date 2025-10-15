@@ -152,7 +152,7 @@
 }
 
 .ab__contact {
-  font-size: 22px;
+  font-size: 18px;
   align-self: flex-start;
   margin-top: auto;          /* прижать кнопку к низу карточки */
 }
@@ -172,24 +172,24 @@
 @media (max-width: 950px) {
   .ab__cards { grid-template-columns: 1fr; padding: 0 24px; }
   .ab__card { max-width: 700px; }
-  .ab__title { font-size: 35px; }
+  .ab__title { font-size: 25px; }
   .ab__padding { padding-bottom: 0; }
   .ab__meta { font-size: 22px; }
   .ab__price { font-size: 24px; }
 }
 
 @media (max-width: 750px) {
-  .ab__header { font-size: 34px; }
+  .ab__header { font-size: 25px; }
 }
 
 @media (max-width: 600px) {
-  .ab__header { font-size: 30px; }
+  .ab__header { font-size: 25px; }
   .ab__meta { font-size: 20px; }
   .ab__price { font-size: 22px; }
 }
 
 @media (max-width: 400px) {
-  .ab__header { font-size: 28px; }
+  .ab__header { font-size: 20px; }
   .ab__meta { font-size: 18px; }
   .ab__price { font-size: 20px; }
 }
